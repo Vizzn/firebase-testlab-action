@@ -12,11 +12,6 @@ if [ -z "$RESULTS_BUCKET" ]; then
   exit 2
 fi
 
-if [ -z "$RESULTS_DIR" ]; then
-  echo "RESULTS_DIR is required to specify where test results will be stored."
-  exit 2
-fi
-
 status=0
 arg_spec=$1
 results_dir=$2
