@@ -1,0 +1,20 @@
+name: 'Firebase TestLab Action'
+description: 'A GitHub Action to test mobile applications (Android, iOS) using Firebase TestLab.'
+author: 'Muhammad Ahmed'
+inputs:
+  arg-spec:
+    description: 'a YAML file includes arguments for gcloud firebase test run command.'
+    required: true
+  results_dir:
+    description: 'Firebase storage directory name to store test-results reports'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.arg-spec }}
+    - ${{ inputs.results_dir }}
+branding:
+  icon: 'box'  
+  color: 'blue'
