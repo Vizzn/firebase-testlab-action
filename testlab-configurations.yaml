@@ -1,0 +1,9 @@
+android-pixel-5:
+  type: instrumentation
+  app: build/app/outputs/apk/dev/debug/app-dev-debug.apk
+  test: build/app/outputs/apk/androidTest/dev/debug/app-dev-debug-androidTest.apk
+  device:
+    - model: redfin
+      version: 30
+      locale: 'en'
+      orientation: portrait
